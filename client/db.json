@@ -1,0 +1,32 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "logesh",
+      "email": "loki@gmail.com",
+      "age": "24",
+      "course": "mern"
+    },
+    {
+      "id": "3",
+      "name": "anish",
+      "email": "anish@gmail.com",
+      "age": "22",
+      "course": "python"
+    },
+    {
+      "id": "4",
+      "name": "surya",
+      "email": "surya@gmail.com",
+      "age": "27",
+      "course": "DevOps"
+    },
+    {
+      "id": "2",
+      "name": "jack",
+      "email": "jack@gmail.com",
+      "age": "13",
+      "course": "MERN"
+    }
+  ]
+}
