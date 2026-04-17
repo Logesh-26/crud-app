@@ -43,7 +43,7 @@ const Form = () => {
                         <label>Id: </label>
                         <input type="text"
                             name="id"
-                            value={ student._id }
+                            value={ student.id }
                             onChange={ handleChange }
                             required
                         />

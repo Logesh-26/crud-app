@@ -7,8 +7,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/Scholar";
 
-app.use(cors());
-app.options("*", cors());
+app.use(cors({
+    origin: "https://crud-app-client-5rs6.onrender.com",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  }));
 app.use(express.json());
 
 mongoose
