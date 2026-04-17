@@ -17,7 +17,7 @@ const Update = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/Scholar/${ id }`);
+                const response = await axios.get(`https://crud-app-backend-b3od.onrender.com/Scholar/${ id }`);
                 setGetDetails(response.data)
                 console.log(response.data)
             } catch (error) {
@@ -35,7 +35,7 @@ const Update = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:3000/Scholar/${ id }`, getDetails);
+            await axios.put(`https://crud-app-backend-b3od.onrender.com/Scholar/${ id }`, getDetails);
             alert("data is updated successfully");
             navigate("/");
         } catch (error) {

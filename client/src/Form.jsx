@@ -23,7 +23,7 @@ const Form = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`http://localhost:3000/Scholar`, student);
+            await axios.post(`https://crud-app-backend-b3od.onrender.com/Scholar`, student);
             alert("Student added successfully");
             console.log(student);
             navigate("/");

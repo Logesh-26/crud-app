@@ -10,7 +10,7 @@ function Read() {
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/Scholar/${ id }`);
+                const response = await axios.get(`https://crud-app-backend-b3od.onrender.com/Scholar/${ id }`);
                 setGetDetails(response.data)
             } catch (error) {
                 console.log("Error Fetching Data", error);

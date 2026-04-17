@@ -9,7 +9,7 @@ const Fetch = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/Scholar`);
+            const response = await axios.get(`https://crud-app-backend-b3od.onrender.com/Scholar`);
             console.log(response.data)
             setData(response.data);
         } catch (error) {
@@ -19,7 +19,7 @@ const Fetch = () => {
 
     const handleDelete = async (del) => {
         try {
-            await axios.delete(`http://localhost:3000/Scholar/${ del }`);
+            await axios.delete(`https://crud-app-backend-b3od.onrender.com/Scholar/${ del }`);
             alert("Student Deleted");
             fetchData();
         } catch (error) {
