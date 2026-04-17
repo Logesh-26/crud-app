@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/Scholar";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 app.use(cors({
     origin: "https://crud-app-client-5rs6.onrender.com",
