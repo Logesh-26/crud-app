@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const BASE_URL = "https://crud-app-backend-b3od.onrender.com"
 const Form = () => {
     const navigate = useNavigate();
 
@@ -23,7 +24,7 @@ const Form = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`https://crud-app-backend-b3od.onrender.com/Scholar`, student);
+            await axios.post(`${BASE_URL}/Scholar`, student);
             alert("Student added successfully");
             console.log(student);
             navigate("/");

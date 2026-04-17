@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams, Link} from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
+const BASE_URL = "https://crud-app-backend-b3od.onrender.com"
 function Read() {
 
     const { id } = useParams();
@@ -10,7 +11,7 @@ function Read() {
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                const response = await axios.get(`https://crud-app-backend-b3od.onrender.com/Scholar/${ id }`);
+                const response = await axios.get(`${BASE_URL}/Scholar/${ id }`);
                 setGetDetails(response.data)
             } catch (error) {
                 console.log("Error Fetching Data", error);

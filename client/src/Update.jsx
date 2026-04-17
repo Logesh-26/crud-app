@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+const BASE_URL = "https://crud-app-backend-b3od.onrender.com"
 const Update = () => {
     const { id } = useParams();
     const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Update = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://crud-app-backend-b3od.onrender.com/Scholar/${ id }`);
+                const response = await axios.get(`${BASE_URL}/Scholar/${ id }`);
                 setGetDetails(response.data)
                 console.log(response.data)
             } catch (error) {
@@ -35,7 +36,7 @@ const Update = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`https://crud-app-backend-b3od.onrender.com/Scholar/${ id }`, getDetails);
+            await axios.put(`${BASE_URL}/Scholar/${ id }`, getDetails);
             alert("data is updated successfully");
             navigate("/");
         } catch (error) {

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
+const BASE_URL = "https://crud-app-backend-b3od.onrender.com";
+
 const Fetch = () => {
     const navigate = useNavigate();
 
@@ -9,7 +11,7 @@ const Fetch = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(`https://crud-app-backend-b3od.onrender.com/Scholar`);
+            const response = await axios.get(`${BASE_URL}/Scholar`);
             console.log(response.data)
             setData(response.data);
         } catch (error) {
@@ -19,7 +21,7 @@ const Fetch = () => {
 
     const handleDelete = async (del) => {
         try {
-            await axios.delete(`https://crud-app-backend-b3od.onrender.com/Scholar/${ del }`);
+            await axios.delete(`${BASE_URL}/Scholar/${ del }`);
             alert("Student Deleted");
             fetchData();
         } catch (error) {
